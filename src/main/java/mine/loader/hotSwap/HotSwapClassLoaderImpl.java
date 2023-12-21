@@ -42,12 +42,14 @@ public class HotSwapClassLoaderImpl extends ClassLoader {
             if("class".equals(endName)){
                 //加载class文件
                 FileInputStream fileInputStream = new FileInputStream(file);
-                //读取文件
+                //读取文件,bytes就是存放 class文件里的字节码
                 byte[] bytes = new byte[(int) file.length()];
+                //把file 这个文件里的内容存入到bytes数组（转换为字节码）
                 fileInputStream.read(bytes);
                 //转换路径
                 String className = filePathToClassName(filePath);
                 clazzs.add(className);
+                //加载类
                 defineClass(className,bytes,0,bytes.length);
             }
         }
