@@ -1,9 +1,9 @@
-package mine.loader.hotSwap;
+package mine.loader.hotSwap.hotSwapApplication;
 
 
-import mine.loader.hotSwap.hotSwapApplication.HotSwapClassLoader;
+import mine.loader.hotSwap.common.TestHotSwap;
 import mine.loader.hotSwap.hotSwapFileListener.FileListener;
-import mine.loader.hotSwap.hotSwapRun.HotSwapTest;
+import mine.loader.hotSwap.HotSwapTestApplication;
 import org.apache.commons.io.monitor.*;
 
 import java.io.File;
@@ -23,11 +23,11 @@ public class HotSwapApplication {
 
     public void start(){
         init();
-        new HotSwapTest().testHotSwap();
+        new HotSwapTestApplication().testHotSwapMethod();
     }
 
     public static void start0(HotSwapClassLoader classLoader) throws Exception{
-        Class<?> aClass = classLoader.loadClass("mine.loader.hotSwap.HotSwapApplication");
+        Class<?> aClass = classLoader.loadClass("mine.loader.hotSwap.hotSwapApplication.HotSwapApplication");
         Object o = aClass.newInstance();
         aClass.getMethod("start").invoke(o);
     }

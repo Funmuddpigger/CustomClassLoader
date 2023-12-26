@@ -1,6 +1,6 @@
 package mine.loader.hotSwap.hotSwapFileListener;
 
-import mine.loader.hotSwap.HotSwapApplication;
+import mine.loader.hotSwap.hotSwapApplication.HotSwapApplication;
 import mine.loader.hotSwap.hotSwapApplication.HotSwapClassLoader;
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 
