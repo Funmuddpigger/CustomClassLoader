@@ -23,7 +23,7 @@ public class HotSwapApplication {
 
     public void start(){
         init();
-        new HotSwapTestApplication().testHotSwapMethod();
+        new TestHotSwap().testHotSwapMethod();
     }
 
     public static void start0(HotSwapClassLoader classLoader) throws Exception{

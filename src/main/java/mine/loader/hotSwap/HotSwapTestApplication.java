@@ -10,13 +10,7 @@ import mine.loader.hotSwap.hotSwapApplication.HotSwapApplication;
  */
 public class HotSwapTestApplication {
 
-    public void testHotSwapMethod(){
-        System.out.println("version: 230.0");
-        System.out.println("current ClassLoader: " + HotSwapTestApplication.class.getClassLoader());
-    }
-
     public static void main(String[] args) throws Exception {
         HotSwapApplication.run(HotSwapTestApplication.class);
     }
-
 }
